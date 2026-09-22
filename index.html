@@ -4,211 +4,867 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>López Cubas Cleaning</title>
+<title>López Cubas Cleaning | Houston, Texas</title>
+
+<meta name="description"
+content="López Cubas Cleaning ofrece servicios profesionales de limpieza residencial y comercial en Houston, Texas.">
 
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    color:#17324d;
-    background:#f7fbff;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#102f4d;
+    background:#f4fbff;
 }
 
-header{
-    background:#0b6e8e;
+/* BARRA SUPERIOR */
+
+.topbar{
+    background:#073f5f;
     color:white;
-    padding:25px 15px;
+    padding:9px 20px;
     text-align:center;
+    font-size:14px;
 }
 
-header h1{
-    margin:0;
-    font-size:32px;
+.topbar span{
+    margin:0 12px;
 }
 
-header p{
-    margin:8px 0 0;
+/* NAVEGACIÓN */
+
+nav{
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
 
-section{
-    padding:45px 20px;
-    text-align:center;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#073f5f;
 }
+
+.logo-icon{
+    font-size:42px;
+}
+
+.logo-text{
+    font-family:Georgia,serif;
+    font-weight:bold;
+    font-size:23px;
+    line-height:1;
+}
+
+.logo-text span{
+    color:#079bc0;
+}
+
+.logo-small{
+    font-size:10px;
+    letter-spacing:3px;
+    display:block;
+    margin-top:5px;
+    color:#477084;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#17324d;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:#079bc0;
+}
+
+/* HERO */
 
 .hero{
-    background:#e9f8ff;
+    min-height:590px;
+    display:flex;
+    align-items:center;
+    padding:70px 7%;
+    background:
+    linear-gradient(90deg,
+    rgba(255,255,255,.98) 0%,
+    rgba(255,255,255,.93) 42%,
+    rgba(255,255,255,.25) 100%),
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=85");
+    background-size:cover;
+    background-position:center;
 }
 
-h2{
-    font-size:28px;
+.hero-content{
+    max-width:650px;
 }
 
-p{
-    font-size:18px;
-    line-height:1.5;
+.badge{
+    display:inline-block;
+    background:#e1f7fc;
+    color:#0789ad;
+    padding:9px 15px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:58px;
+    line-height:1.05;
+    margin:0 0 20px;
+    color:#102f4d;
+}
+
+.hero h1 span{
+    color:#079bc0;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.6;
+    color:#34556c;
+    max-width:590px;
+}
+
+.features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin:25px 0;
+}
+
+.feature{
+    font-weight:bold;
+}
+
+.feature span{
+    color:#079bc0;
+    font-size:25px;
+    margin-right:5px;
+}
+
+.buttons{
+    margin-top:25px;
 }
 
 .btn{
     display:inline-block;
-    background:#16a085;
-    color:white;
-    padding:15px 24px;
-    margin:8px;
+    padding:16px 27px;
+    margin:6px;
     border-radius:10px;
     text-decoration:none;
     font-weight:bold;
+    color:white;
+    transition:.2s;
 }
 
 .btn:hover{
-    opacity:.9;
+    transform:translateY(-2px);
 }
 
+.whatsapp{
+    background:#16a85a;
+}
+
+.phone{
+    background:#087fc0;
+}
+
+/* SECCIONES */
+
+section{
+    padding:70px 6%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin:0 0 8px;
+    color:#102f4d;
+}
+
+.section-title p{
+    color:#557184;
+    font-size:18px;
+}
+
+/* SERVICIOS */
+
 .services{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:18px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    max-width:1200px;
+    margin:auto;
 }
 
 .card{
     background:white;
-    padding:20px;
-    border-radius:12px;
-    width:220px;
-    box-shadow:0 3px 12px #0002;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,50,80,.10);
+    text-align:center;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-image{
+    height:150px;
+    background-size:cover;
+    background-position:center;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-icon{
+    font-size:38px;
+}
+
+.card h3{
+    font-size:20px;
+    margin:10px 0;
+}
+
+.card p{
+    color:#5c7180;
+    line-height:1.5;
+}
+
+/* TRABAJOS */
+
+.work-section{
+    background:#e8f7fc;
+}
+
+.work-button{
+    text-align:center;
+    margin-top:35px;
 }
 
 .gallery{
-    background:white;
-}
-
-.gallery-box{
-    max-width:500px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    max-width:1200px;
     margin:auto;
-    background:#f7fbff;
-    padding:30px 20px;
+}
+
+.gallery div{
+    height:230px;
     border-radius:15px;
-    box-shadow:0 3px 12px #0002;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
 }
 
-.gallery-icon{
-    font-size:60px;
+.photo1{
+    background-image:url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=80");
 }
 
-footer{
-    background:#17324d;
+.photo2{
+    background-image:url("https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80");
+}
+
+.photo3{
+    background-image:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80");
+}
+
+.photo4{
+    background-image:url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80");
+}
+
+/* POR QUÉ ELEGIRNOS */
+
+.trust{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.trust-item{
+    padding:20px;
+}
+
+.trust-icon{
+    font-size:42px;
+}
+
+.trust h3{
+    margin-bottom:8px;
+}
+
+/* COTIZACIÓN */
+
+.quote{
+    background:linear-gradient(135deg,#087c9d,#064d70);
     color:white;
     text-align:center;
-    padding:25px;
+    border-radius:30px;
+    margin:50px auto;
+    max-width:1200px;
+    padding:55px 25px;
+}
+
+.quote h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    margin-top:0;
+}
+
+.quote p{
+    font-size:19px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#07344f;
+    color:white;
+    padding:50px 6% 25px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.footer-logo{
+    font-family:Georgia,serif;
+    font-size:27px;
+    font-weight:bold;
 }
 
 footer p{
-    margin:5px;
+    color:#d4e8f0;
+    line-height:1.6;
 }
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.2);
+    margin-top:35px;
+    padding-top:20px;
+    text-align:center;
+    color:#b9d2de;
+}
+
+/* MÓVIL */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        min-height:650px;
+        padding:55px 25px;
+        background-position:center;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-content{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .topbar span{
+        display:block;
+        margin:4px;
+    }
+
+    nav{
+        padding:12px 18px;
+    }
+
+    .logo-text{
+        font-size:19px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:50px 18px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery div{
+        height:170px;
+    }
+
+    .trust{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .btn{
+        width:90%;
+        margin:6px auto;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🧹 López Cubas Cleaning</h1>
-    <p>Professional Cleaning Services</p>
-</header>
+<!-- BARRA SUPERIOR -->
 
-<section class="hero">
+<div class="topbar">
+    <span>📍 Houston, Texas</span>
+    <span>📞 832-561-9462</span>
+    <span>✉️ lopezsavier137@gmail.com</span>
+</div>
 
-    <h2>Servicios Profesionales de Limpieza</h2>
+<!-- NAVEGACIÓN -->
 
-    <p>
-        Limpieza confiable y profesional para hogares
-        y negocios en Houston, Texas.
-    </p>
+<nav>
 
-    <a class="btn"
-       href="https://wa.me/18325619462?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20limpieza."
-       target="_blank">
-       💬 WhatsApp
-    </a>
+<a class="logo" href="#inicio">
 
-    <a class="btn"
-       href="tel:+18325619462">
-       📞 832-561-9462
-    </a>
+<div class="logo-icon">🏠✨</div>
+
+<div class="logo-text">
+LÓPEZ CUBAS
+<br>
+<span>CLEANING</span>
+<small class="logo-small">CLEAN SPACES. HAPPIER LIVES.</small>
+</div>
+
+</a>
+
+<div class="menu">
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#trabajos">Nuestros trabajos</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="badge">
+✨ Limpieza profesional en Houston
+</div>
+
+<h1>
+Tu Hogar Más Limpio,
+<br>
+<span>Tu Vida Más Feliz</span>
+</h1>
+
+<p>
+Servicios de limpieza profesionales, confiables
+y accesibles para hogares y negocios en Houston, Texas.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<span>✓</span> Confiable
+</div>
+
+<div class="feature">
+<span>🌿</span> Calidad
+</div>
+
+<div class="feature">
+<span>✨</span> Profesional
+</div>
+
+<div class="feature">
+<span>❤️</span> A tu medida
+</div>
+
+</div>
+
+<div class="buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/18325619462?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20limpieza."
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a class="btn phone"
+href="tel:+18325619462">
+📞 Llamar ahora
+</a>
+
+</div>
+
+</div>
 
 </section>
+
+<!-- SERVICIOS -->
+
+<section id="servicios">
+
+<div class="section-title">
+
+<h2>Nuestros Servicios</h2>
+
+<p>
+Soluciones de limpieza para cada espacio
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="card">
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="card-content">
+
+<div class="card-icon">🏠</div>
+
+<h3>Limpieza Residencial</h3>
+
+<p>
+Casas, apartamentos y espacios residenciales.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="card-content">
+
+<div class="card-icon">🏢</div>
+
+<h3>Limpieza Comercial</h3>
+
+<p>
+Oficinas, tiendas y negocios.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="card-content">
+
+<div class="card-icon">✨</div>
+
+<h3>Limpieza Profunda</h3>
+
+<p>
+Cocinas, baños y áreas difíciles.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="card-content">
+
+<div class="card-icon">🧽</div>
+
+<h3>Servicio Personalizado</h3>
+
+<p>
+Cuéntanos qué necesitas y preparamos una cotización.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NUESTROS TRABAJOS -->
+
+<section class="work-section" id="trabajos">
+
+<div class="section-title">
+
+<h2>Nuestros Trabajos</h2>
+
+<p>
+Mira la diferencia que hace una limpieza profesional.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="photo1"></div>
+<div class="photo2"></div>
+<div class="photo3"></div>
+<div class="photo4"></div>
+
+</div>
+
+<div class="work-button">
+
+<a class="btn phone"
+href="https://photos.app.goo.gl/Vkb6T7kTN4SWEkMH7"
+target="_blank">
+
+📸 Ver más fotos de nuestros trabajos
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CONFIANZA -->
 
 <section>
 
-    <h2>Nuestros Servicios</h2>
+<div class="section-title">
 
-    <div class="services">
+<h2>¿Por qué López Cubas Cleaning?</h2>
 
-        <div class="card">
-            <h3>🏠 Limpieza Residencial</h3>
-            <p>Limpieza de casas y apartamentos.</p>
-        </div>
+<p>
+Nuestro objetivo es dejar cada espacio limpio y agradable.
+</p>
 
-        <div class="card">
-            <h3>🏢 Limpieza Comercial</h3>
-            <p>Limpieza profesional para negocios y oficinas.</p>
-        </div>
+</div>
 
-        <div class="card">
-            <h3>✨ Limpieza Profunda</h3>
-            <p>Limpieza detallada de cocinas, baños y espacios difíciles.</p>
-        </div>
+<div class="trust">
 
-        <div class="card">
-            <h3>🧽 Servicio Personalizado</h3>
-            <p>Cuéntanos qué necesitas y preparamos una cotización.</p>
-        </div>
+<div class="trust-item">
 
-    </div>
+<div class="trust-icon">🛡️</div>
+
+<h3>Confiable</h3>
+
+<p>Servicio responsable y profesional.</p>
+
+</div>
+
+<div class="trust-item">
+
+<div class="trust-icon">🌿</div>
+
+<h3>Calidad</h3>
+
+<p>Cuidamos cada detalle.</p>
+
+</div>
+
+<div class="trust-item">
+
+<div class="trust-icon">✨</div>
+
+<h3>Profesional</h3>
+
+<p>Trabajamos con dedicación.</p>
+
+</div>
+
+<div class="trust-item">
+
+<div class="trust-icon">❤️</div>
+
+<h3>A tu medida</h3>
+
+<p>Adaptamos el servicio a tus necesidades.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COTIZACIÓN -->
+
+<section id="contacto">
+
+<div class="quote">
+
+<h2>Solicita tu cotización hoy</h2>
+
+<p>
+Estamos listos para ayudarte.
+</p>
+
+<a class="btn whatsapp"
+href="https://wa.me/18325619462?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20limpieza."
+target="_blank">
+
+💬 Solicitar por WhatsApp
+
+</a>
+
+<a class="btn phone"
+href="tel:+18325619462">
+
+📞 832-561-9462
+
+</a>
+
+</div>
 
 </section>
 
-<section class="gallery">
-
-    <div class="gallery-box">
-
-        <div class="gallery-icon">📸</div>
-
-        <h2>Conoce nuestros trabajos</h2>
-
-        <p>
-            Mira fotos de algunos de nuestros trabajos
-            de limpieza.
-        </p>
-
-        <a class="btn"
-           href="https://photos.app.goo.gl/Vkb6T7kTN4SWEkMH7"
-           target="_blank">
-           📸 Ver nuestros trabajos
-        </a>
-
-    </div>
-
-</section>
-
-<section class="hero">
-
-    <h2>Solicita tu cotización</h2>
-
-    <p>Estamos listos para ayudarte.</p>
-
-    <a class="btn"
-       href="https://wa.me/18325619462?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20limpieza."
-       target="_blank">
-       💬 Solicitar cotización
-    </a>
-
-</section>
+<!-- FOOTER -->
 
 <footer>
 
-    <p><strong>López Cubas Cleaning</strong></p>
-    <p>Houston, Texas</p>
-    <p>📞 832-561-9462</p>
+<div class="footer-content">
+
+<div>
+
+<div class="footer-logo">
+🏠✨ LÓPEZ CUBAS CLEANING
+</div>
+
+<p>
+Clean Spaces. Happier Lives.
+<br>
+Espacios limpios. Vidas más felices.
+</p>
+
+</div>
+
+<div>
+
+<h3>Contacto</h3>
+
+<p>
+📍 Houston, Texas<br><br>
+📞 <a href="tel:+18325619462">832-561-9462</a><br><br>
+💬 <a href="https://wa.me/18325619462" target="_blank">WhatsApp</a>
+</p>
+
+</div>
+
+<div>
+
+<h3>Correo</h3>
+
+<p>
+✉️
+<a href="mailto:lopezsavier137@gmail.com">
+lopezsavier137@gmail.com
+</a>
+</p>
+
+<p>
+🧹 Limpieza residencial<br>
+🏢 Limpieza comercial<br>
+✨ Limpieza profunda
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 López Cubas Cleaning · Houston, Texas
+
+</div>
 
 </footer>
 
